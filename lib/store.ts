@@ -28,11 +28,11 @@ export class Store implements IStore {
     return this.db.count_events(provider, type);
   }
 
-  public save_snapshot(provider: string, verison: number, snapshot: ISnapshot) {
-    throw new Error('Not yet implemented');
+  public save_snapshot(provider: string, version: number, snapshot: ISnapshot) {
+    return this.db.save_snapshot(provider, version, snapshot);
   }
 
   public latest_snapshot(provider: string): Promise<ISnapshot> {
-    throw new Error('Not yet implemented');
+    return this.db.latest_snapshot(provider);
   }
 }
